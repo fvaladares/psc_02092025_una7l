@@ -3,30 +3,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        double valorReal;
-        double valorDolar = 4.95; // declaração e inicialização de variável
-        double valorConvertido;
+        Exercicio01 exercicio01 = new Exercicio01();
+        Exercicio02 exercicio02 = new Exercicio02();
 
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Coversor de Real para Dolar");
-
-        System.out.println();
-        System.out.print("Informe o valor R$ ");
-
-        valorReal = in.nextDouble();
-        if (valorReal > 0) {
-            valorConvertido = valorReal * valorDolar;
-
-            System.out.println();
-
-            System.out.printf("R$%.2f = US$%.2f", valorReal, valorConvertido);
-
-            System.out.println();
-        } else {
-            System.out.println("Você deve informar um valor positivo não nulo.");
-        }
+        exercicio01.executar(input);
+        exercicio02.executar(input);
     }
 }
 
