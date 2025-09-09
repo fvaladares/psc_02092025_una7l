@@ -6,7 +6,7 @@ public class Exercicio03 {
 
     /*
     TODO Nõa permita que a pessoa informe idade negativa ou \
-     nula; Se isso acontecer, informe que os dados são inválidos.
+     nula; Se isso acontecer, avise que os dados são inválidos.
      */
     public void executar(Scanner input) {
         int idadeEmAnos;
@@ -20,13 +20,16 @@ public class Exercicio03 {
         System.out.print("Informe sua idade em anos: ");
         idadeEmAnos = input.nextInt();
 
-        idadeEmMeses = idadeEmAnos * mesesPorAno;
-
-        System.out.println();
-
-        // %d - Inteiro; %f - Ponto flutuante
-        System.out.printf("Você tem %d meses de idade\n",
-                idadeEmMeses);
+        if(idadeEmAnos > 0){
+            idadeEmMeses = idadeEmAnos * mesesPorAno;
+            System.out.println();
+            // %d - Inteiro; %f - Ponto flutuante
+            System.out.printf("Você tem %d meses de idade\n",
+                    idadeEmMeses);
+        } else {
+            System.out.println("O valor da idade deve " +
+                    "ser maior do que zero");
+        }
 
         System.out.println("FIM DO PROGRAMA");
     }
